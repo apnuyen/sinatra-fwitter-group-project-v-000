@@ -46,7 +46,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  path '/tweets/:id' do
+  patch '/tweets/:id' do
     @tweet = Tweet.find(params[:id])
     if params[:content] != ""
       @tweet.update(:content => params[:content])
